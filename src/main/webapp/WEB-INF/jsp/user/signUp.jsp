@@ -12,13 +12,19 @@
 		
 		<form id="signUpForm" method="post" action="/user/sign_up" class="border boder-dark">
 			<div>
-				<label><input type="text" id="phoneNumberOrEmail" name="phoneNumberOrEmail" class="form-control" placeholder="휴대폰 번호 또는 이메일 주소"></label><br>
+				<label><input type="text" id="loginId" name="loginId" class="form-control" placeholder="휴대폰 번호 또는 이메일 주소">
+					<div id="idCheckDuplicated" class="small text-danger d-none">이미 사용중인 전화번호나 이메일입니다.</div>
+					<div id="idCheckOk" class="small text-success d-none">사용 가능합니다.</div>
+				</label>
+				
+				<br>
+				
 				<label><input type="text" id="name" name="name" class="form-control" placeholder="성명"></label><br>
 				<div>
 					<label><input  type="text" id="userId" name="userId" class="form-control" placeholder="사용자 이름"></label>
 					<button type="button" id="userIdCheckBtn" class="btn btn-success">중복확인</button>
 				</div>
-				<label><input type="text" id="name" name="name" class="form-control" placeholder="휴대폰 번호 또는 이메일 주소"></label>
+				<label><input type="password" id="password" name="password" class="form-control" placeholder="비밀번호"></label>
 			</div>
 			<div>
 				<small> 저희 서비스를 이용하는 사람이 회원님의 연락처 정보<br>를 Instagram에 업로드했을 수도 있습니다. 
