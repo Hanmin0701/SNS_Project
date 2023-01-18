@@ -24,4 +24,34 @@
 		, NOW()
 	)
 	</insert>
+	<select id="selectPostListByUserId" parameterType="int" resultType="com.sns.post.model.Post">
+		SELECT 
+			`id`
+			, `userId`
+			, `subject`
+			, `content`
+			, `imagePath`
+			, `createdAt`
+			, `updatedAt`
+		FROM 
+			`post`
+		WHERE
+			`userId` = #{userId}
+		ORDER BY `id` DESC
+	</select>
+	
+	<select id="selectPostDetail" parameterType="int" resultType="com.sns.post.model.Post">
+		SELECT 
+			`id`
+			, `userId`
+			, `subject`
+			, `content`
+			, `imagePath`
+			, `createdAt`
+			, `updatedAt`
+		FROM 
+			`post`
+		WHERE
+			`userId` = #{userId} AND `postId` = #{postId}
+	</select>
 </mapper>

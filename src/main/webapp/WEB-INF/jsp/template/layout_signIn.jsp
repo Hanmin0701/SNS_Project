@@ -36,37 +36,5 @@
 			<jsp:include page="../include/footer.jsp"/>
 		</footer>
 	</div>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$('signInBtn').on('submit', function(e){
-			// submit 기능 중단
-			e.preventDefault();
-			
-			// validation
-			let loginId = $('input[name=loginId]').val().trim();
-			let password = $('input[name=password]').val();
-			
-			if (loginId == "") {
-				alert("전화번호나 이메일을 입력해주세요.");
-			}
-			if (password == "") {
-				alert("비밀번호를 입력해주세요.");
-			} 	
-			
-			let url = (this).attr('action');
-			let params = $(this).serialize(); 
-			// console.log();
-			
-			$.post(url, params);
-			.done(function(data){
-				if(data.code == 1) {  // 성공
-					document.location.href="/"; // 글 목록으로 이동
-				} else {
-					alert(data.errorMessage);
-				}
-			};
-		});
-	});
-</script>
 </body>
 </html>

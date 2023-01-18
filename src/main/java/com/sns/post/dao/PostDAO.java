@@ -5,6 +5,8 @@ import java.util.*;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
+import com.sns.post.model.Post;
+
 @Repository
 public interface PostDAO {
 	
@@ -15,4 +17,8 @@ public interface PostDAO {
 			@Param("subject") String subject, 
 			@Param("content") String content, 
 			@Param("imagePath") String imagePath);
+	
+	public List<Post> selectPostListByUserId(int userId);
+	
+	public int selectPostDetail(int userId, int postId);
 }
