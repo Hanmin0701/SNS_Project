@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.sns.post.bo.PostBO;
+import com.sns.post.model.Post;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -44,7 +45,7 @@ public class postController {
 		}
 		
 		// DB select by - userId, postId
-		int rows = postBO.addPostDetail(userId, postId);
+		Post post = postBO.getPostByPostIdUserId(userId, postId);
 		
 		model.addAttribute("viewName", "post/postDetail");
 		return "template/layout";

@@ -6,13 +6,12 @@ public class Comment {
 	
 	private int id;
 	private int postId;
-	private String userId;
-	private String ImageUrl;
+	private String userId; 
 	private String content;
 	private Date createdAt;
-	private Date updatedAt; 
+	private Date updatedAt;
 	
-	// getters and setters
+	
 	public int getId() {
 		return id;
 	}
@@ -31,12 +30,6 @@ public class Comment {
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-	public String getImageUrl() {
-		return ImageUrl;
-	}
-	public void setImageUrl(String imageUrl) {
-		ImageUrl = imageUrl;
-	}
 	public String getContent() {
 		return content;
 	}
@@ -54,5 +47,5 @@ public class Comment {
 	}
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
-	}
+	} 
 }

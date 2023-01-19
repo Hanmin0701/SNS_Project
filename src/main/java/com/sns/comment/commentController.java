@@ -1,5 +1,19 @@
 package com.sns.comment;
 
-public class commentController {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.sns.comment.bo.CommentBO;
+
+@Controller
+@RequestMapping("/comment")
+public class commentController {
+	
+	@Autowired
+	private CommentBO commentBO;
+	
+	
 }

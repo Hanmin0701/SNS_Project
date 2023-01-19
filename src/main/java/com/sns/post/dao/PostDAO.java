@@ -20,5 +20,5 @@ public interface PostDAO {
 	
 	public List<Post> selectPostListByUserId(int userId);
 	
-	public int selectPostDetail(int userId, int postId);
+	public Post getPostByPostIdUserId(int userId, int postId);
 }

@@ -6,13 +6,19 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.sns.timeline.bo.TimelineBO;
+import com.sns.post.bo.PostBO;
 
 @Controller
 @RequestMapping("/timeline")
 public class TimeLineController {
 	
 	@Autowired
-	private TimelineBO timelineBO;
+	private PostBO postBO;
 	
+//	@GetMapping("/timline/timeline_view")
+//	public String timelineVeiw(Model model) {
+//		
+//		
+//		return "";
+//	}
 }
