@@ -10,7 +10,7 @@ import com.sns.comment.bo.CommentBO;
 
 @Controller
 @RequestMapping("/comment")
-public class commentController {
+public class commentRestController {
 	
 	@Autowired
 	private CommentBO commentBO;
